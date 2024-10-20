@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Force HTTPS and WWW
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [OR,NC]
+RewriteCond %{https} off
+	RewriteRule ^(.*)$ https://dspl.ca/$1 [R=301,L]
+</IfModule>
