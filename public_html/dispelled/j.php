@@ -28,7 +28,7 @@
 </p>
 
 <p><strong>Programming</strong><br />
-<a href="https://thinkingeek.com/series/exploring-aarch64/">Think in Geek Exploring Aarch64 Tutorial</a>, <a href="https://mariokartwii.com/armv8/">MarioKartWii ARM Aarch64 Assembly Tutorial</a> , <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a>, <a href="https://modexp.wordpress.com/2018/10/30/arm64-assembly/">A Guide to ARM64 / AArch64 Assembly on Linux with Shellcodes and Cryptography</a>
+<a href="https://thinkingeek.com/series/exploring-aarch64/">Think in Geek Exploring Aarch64 Tutorial</a>, <a href="https://mariokartwii.com/armv8/">MarioKartWii ARM Aarch64 Assembly Tutorial</a> , <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a>, <a href="https://modexp.wordpress.com/2018/10/30/arm64-assembly/">A Guide to ARM64 / AArch64 Assembly on Linux with Shellcodes and Cryptography</a>, <a href="https://www.tutorialspoint.com/cprogramming/index.htm">Tutorials point C Tutorial</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">GNU Bash manual</a>
 </p>
 
 <p><strong>Rapidtables</strong><br />
