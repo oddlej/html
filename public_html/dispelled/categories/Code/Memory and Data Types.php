@@ -4,7 +4,7 @@
 
 <h1>Memory and Data Types</h1>
 
-<p>I haven't enjoyed revisiting this. But it is essential otherwise you will suck at it (me). Lets go.</p>
+<p>I haven't enjoyed revisiting this. But it is essential otherwise you will suck at it (what I was doing before and have vowed not to anymore). Once again I am learning Assembly language on a Khadas Vim3 (Arm64) with Ubuntu 24.04. Lets go.</p>
 
 <p>Decimal math is called base 10. An example. We count to nine starting at zero.</p>
 
