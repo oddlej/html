@@ -674,7 +674,7 @@ a:active { color: #996614; }
 
 /* -------------------------- */
 
-p, h1, .comments-title, cite { color: #CED3D5; }
+p, h1, h2, h3, h4, h5, .comments-title, cite { color: #CED3D5; }
 
 code, pre, .entry-content pre, .comment-content pre {
 	color: #000;
