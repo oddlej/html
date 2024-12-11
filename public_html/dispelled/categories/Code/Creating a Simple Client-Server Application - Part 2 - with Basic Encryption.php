@@ -1,9 +1,9 @@
-<!--date=20241203 -->
+<!--date=20241204 -->
 
 <?php include("../../headercat.php"); ?>
 
-<h1>Creating a Simple Client-Server Application in C</h1>
-<p>In this tutorial, we will create a simple client-server application in C. The server will listen for incoming connections on a specified port, and the client will connect to the server, send a message, and receive a response. This tutorial is aimed at beginners, so we will explain each line of code in detail.</p>
+<h1>Creating a Simple Client-Server Application - Part 2 - with Basic Encryption</h1>
+<p>In this tutorial, we will create a simple client-server application in C with a basic XOR encryption. The server will listen for incoming connections on a specified port, and the client will connect to the server, send an encrypted message, and receive an encrypted response. This tutorial is aimed at beginners, so we will explain each line of code in detail.</p>
 
 <h2>Server Code</h2>
 <pre>
@@ -16,6 +16,13 @@
 #include &lt;arpa/inet.h&gt;
 
 #define PORT 8080
+#define KEY 0xAA // Simple XOR key
+
+void xor_encrypt_decrypt(char *data, size_t len, char key) {
+    for (size_t i = 0; i < len; i++) {
+        data[i] ^= key;
+    }
+}
 
 int main() {
     int server_fd, new_socket;
@@ -62,9 +69,15 @@ int main() {
     }
 
     read(new_socket, buffer, 1024);
-    printf("Message from client: %s\n", buffer);
-    send(new_socket, hello, strlen(hello), 0);
-    printf("Hello message sent\n");
+    xor_encrypt_decrypt(buffer, strlen(buffer), KEY); // Decrypt the message
+    printf("Decrypted message from client: %s\n", buffer);
+    xor_encrypt_decrypt(buffer, strlen(buffer), KEY); // Re-encrypt the message for sending back
+
+    char encrypted_hello[1024];
+    strcpy(encrypted_hello, hello);
+    xor_encrypt_decrypt(encrypted_hello, strlen(encrypted_hello), KEY); // Encrypt the response
+    send(new_socket, encrypted_hello, strlen(encrypted_hello), 0);
+    printf("Encrypted hello message sent\n");
 
     close(new_socket);
     close(server_fd);
@@ -81,6 +94,8 @@ int main() {
     <li><code>#include &lt;unistd.h&gt;</code>: Includes the POSIX operating system API.</li>
     <li><code>#include &lt;arpa/inet.h&gt;</code>: Includes definitions for internet operations.</li>
     <li><code>#define PORT 8080</code>: Defines the port number the server will listen on.</li>
+    <li><code>#define KEY 0xAA</code>: Defines the XOR key for encryption and decryption.</li>
+    <li><code>void xor_encrypt_decrypt(char *data, size_t len, char key)</code>: Function to encrypt and decrypt data using XOR.</li>
     <li><code>int main()</code>: The main function where the program execution begins.</li>
     <li><code>int server_fd, new_socket;</code>: Declares file descriptors for the server and new socket.</li>
     <li><code>struct sockaddr_in address;</code>: Declares a structure to hold the server address.</li>
@@ -97,9 +112,14 @@ int main() {
     <li><code>if (listen(server_fd, 3) < 0)</code>: Listens for incoming connections with a backlog of 3.</li>
     <li><code>if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0)</code>: Accepts an incoming connection.</li>
     <li><code>read(new_socket, buffer, 1024);</code>: Reads the message from the client into the buffer.</li>
-    <li><code>printf("Message from client: %s\n", buffer);</code>: Prints the message from the client.</li>
-    <li><code>send(new_socket, hello, strlen(hello), 0);</code>: Sends the hello message to the client.</li>
-    <li><code>printf("Hello message sent\n");</code>: Prints a confirmation message.</li>
+    <li><code>xor_encrypt_decrypt(buffer, strlen(buffer), KEY);</code>: Decrypts the message from the client.</li>
+    <li><code>printf("Decrypted message from client: %s\n", buffer);</code>: Prints the decrypted message from the client.</li>
+    <li><code>xor_encrypt_decrypt(buffer, strlen(buffer), KEY);</code>: Re-encrypts the message for sending back.</li>
+    <li><code>char encrypted_hello[1024];</code>: Buffer to store the encrypted response.</li>
+    <li><code>strcpy(encrypted_hello, hello);</code>: Copies the hello message to the buffer.</li>
+    <li><code>xor_encrypt_decrypt(encrypted_hello, strlen(encrypted_hello), KEY);</code>: Encrypts the response.</li>
+    <li><code>send(new_socket, encrypted_hello, strlen(encrypted_hello), 0);</code>: Sends the encrypted response to the client.</li>
+    <li><code>printf("Encrypted hello message sent\n");</code>: Prints a confirmation message.</li>
     <li><code>close(new_socket);</code>: Closes the new socket.</li>
     <li><code>close(server_fd);</code>: Closes the server socket.</li>
     <li><code>return 0;</code>: Exits the program.</li>
@@ -115,6 +135,13 @@ int main() {
 #include &lt;arpa/inet.h&gt;
 
 #define PORT 8080
+#define KEY 0xAA // Simple XOR key
+
+void xor_encrypt_decrypt(char *data, size_t len, char key) {
+    for (size_t i = 0; i < len; i++) {
+        data[i] ^= key;
+    }
+}
 
 int main() {
     int sock = 0, valread;
@@ -141,10 +168,15 @@ int main() {
         return -1;
     }
 
-    send(sock, hello, strlen(hello), 0);
-    printf("Hello message sent\n");
+    char encrypted_hello[1024];
+    strcpy(encrypted_hello, hello);
+    xor_encrypt_decrypt(encrypted_hello, strlen(encrypted_hello), KEY); // Encrypt the message
+    send(sock, encrypted_hello, strlen(encrypted_hello), 0);
+    printf("Encrypted hello message sent\n");
+
     valread = read(sock, buffer, 1024);
-    printf("%s\n", buffer);
+    xor_encrypt_decrypt(buffer, valread, KEY); // Decrypt the response
+    printf("Decrypted message from server: %s\n", buffer);
 
     return 0;
 }
@@ -159,6 +191,8 @@ int main() {
     <li><code>#include &lt;unistd.h&gt;</code>: Includes the POSIX operating system API.</li>
     <li><code>#include &lt;arpa/inet.h&gt;</code>: Includes definitions for internet operations.</li>
     <li><code>#define PORT 8080</code>: Defines the port number the client will connect to.</li>
+    <li><code>#define KEY 0xAA</code>: Defines the XOR key for encryption and decryption.</li>
+    <li><code>void xor_encrypt_decrypt(char *data, size_t len, char key)</code>: Function to encrypt and decrypt data using XOR.</li>
     <li><code>int main()</code>: The main function where the program execution begins.</li>
     <li><code>int sock = 0, valread;</code>: Declares a socket and a variable to store the number of bytes read.</li>
     <li><code>struct sockaddr_in serv_addr;</code>: Declares a structure to hold the server address.</li>
@@ -169,17 +203,20 @@ int main() {
     <li><code>serv_addr.sin_port = htons(PORT);</code>: Sets the port number, converting it to network byte order.</li>
     <li><code>if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)</code>: Converts the IP address from text to binary form and checks for errors.</li>
     <li><code>if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)</code>: Connects to the server and checks for errors.</li>
-    <li><code>send(sock, hello, strlen(hello), 0);</code>: Sends the hello message to the server.</li>
-    <li><code>printf("Hello message sent\n");</code>: Prints a confirmation message.</li>
-    <li><code>valread = read(sock, buffer, 1024);</code>: Reads the message from the server into the buffer.</li>
-    <li><code>printf("%s\n", buffer);</code>: Prints the message from the server.</li>
+    <li><code>char encrypted_hello[1024];</code>: Buffer to store the encrypted message.</li>
+    <li><code>strcpy(encrypted_hello, hello);</code>: Copies the hello message to the buffer.</li>
+    <li><code>xor_encrypt_decrypt(encrypted_hello, strlen(encrypted_hello), KEY);</code>: Encrypts the message.</li>
+    <li><code>send(sock, encrypted_hello, strlen(encrypted_hello), 0);</code>: Sends the encrypted message to the server.</li>
+    <li><code>printf("Encrypted hello message sent\n");</code>: Prints a confirmation message.</li>
+    <li><code>valread = read(sock, buffer, 1024);</code>: Reads the response from the server into the buffer.</li>
+    <li><code>xor_encrypt_decrypt(buffer, valread, KEY);</code>: Decrypts the response.</li>
+    <li><code>printf("Decrypted message from server: %s\n", buffer);</code>: Prints the decrypted message from the server.</li>
     <li><code>return 0;</code>: Exits the program.</li>
 </ul>
 
 <h2>Compiling and Running the Code</h2>
 <p>To compile and run the provided C source code files for the ARM64 architecture, follow these steps:</p>
-<pre>
-<code class="language-sh">
+<pre><code class="language-sh">
 # Compile the server code
 gcc -o server server.c
 
@@ -191,10 +228,9 @@ gcc -o client client.c
 
 # Run the client in a separate terminal
 ./client
-</code>
-</pre>
+</code></pre>
 
-<p>This will start the server, which listens on port 8080, and the client will connect to the server, send a message, and receive a response.</p>
+<p>This will start the server, which listens on port 8080, and the client will connect to the server, send an encrypted message, and receive a response. The messages will be encrypted and decrypted using the XOR algorithm.</p>
 
 <p>&nbsp;</p>
 <?php include("../../footer.php"); ?>
