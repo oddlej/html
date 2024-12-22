@@ -79,7 +79,7 @@ RewriteCond %{HTTP_HOST} ^www\.
 
 <p><strong>The last piece of the puzzle. Adding posts</strong></p>
 
-<p>At this point, you just start adding content. Add folders and add the index.php that looks like this)</p>
+<p>At this point, you just start adding content. Add folders and add the index.php that looks like this.</p>
 
 <pre>
 <?php show_source("../../categories/Code/index.php"); ?>
