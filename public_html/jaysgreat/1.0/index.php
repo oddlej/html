@@ -1,21 +1,16 @@
 <?php include("header.php"); ?>
-
-<!-- This overrides image display (!important) and keeps iframes off of this page only. -->
+<!-- This overrides image display (!important) and keeps iframes off of this page only. <style> in this context doesn't validate. -->
 <style>
 img {display: none !important;}
 iframe {display: none;}
 </style>
 
 <h1>Generic Homepage</h1>
-
 <p>This is your home page. It can be structured any way you want. This site is made only from <a href="categories/Code/How%20this%20website%20was%20made.php">a few PHP files and a flat file directory structure</a>.</p>
 <p>Have fun and Cheers.</p>
-
-
 <p>&nbsp;</p>
 
 <p><b>Old School News Feeds (RSS)</b> <a href="categories/Code/RSS%20example%20from%20main%20page.php">How?</a></p>
-
 <p><b>Slashdot</b></p>
 <?php
 	$rss = new DOMDocument();
@@ -34,12 +29,10 @@ iframe {display: none;}
 		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
 		$link = $feed[$x]['link'];
 		$description = $feed[$x]['desc'];
-		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
+		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br>';
 		echo '<p>'.$description.'</p>';
 	}
 ?>
-
-
 <p><b>Ars Technica</b></p>
 <?php
 	$rss = new DOMDocument();
@@ -58,10 +51,8 @@ iframe {display: none;}
 		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
 		$link = $feed[$x]['link'];
 		$description = $feed[$x]['desc'];
-		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
+		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br>';
 		echo '<p>'.$description.'</p>';
 	}
 ?>
-
-<?php include("footer.php"); ?>
-					
+<?php include("footer.php"); ?>					

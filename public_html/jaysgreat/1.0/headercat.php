@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Website Name</title>
 </head>
-
-<body>
-	
-<div id="titlediv"><div id="title">
-<div style="text-align: right;"><a href="../../"><h1>Website Name</h1></a></div></div></div>
-
+<body>	
+<div id="title">
+	<div id="name"><a href="../../"-->><h1>Website Name</h1></a>
+	</div>
+</div>
 <div id="page" class="hfeed site">
-<header id="masthead">
-
-<!-- #site-navigation -->
-<nav id="site-navigation">
-			<div class="menu"><ul><li><a href="../../">Home</a></li><li><a href="../../">Back to Categories >></a></li><li><a href="../../about.php">About</a></li>
-</ul></div>	
+	<header id="masthead">
+	<!-- #site-navigation -->
+	<nav id="site-navigation">
+	<div class="menu"><ul><li><a href="../../">Home</a></li><li><a href="../../">Back to Categories >></a></li><li><a href="../../about.php">About</a></li></ul>
+	</div>	
 </nav><!-- #site-navigation -->
 </header><!-- #masthead -->
 

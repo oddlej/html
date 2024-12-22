@@ -5,16 +5,11 @@
 img {display: none !important;}
 iframe {display: none;}
 </style>
-
 <h1>Dispelled.ca Homepage</h1>
-
 <p>Welcome to our little spot on the Internet. Finally got it back to the basics. This site is made only from <a href="http://dispelled.ca/categories/Code/How%20this%20website%20was%20made.php">a few PHP files and a flat file directory structure</a>.</p>
 <p>Things will get broken, and things will get better. Cheers.</p>
-
 <!-- Quick links is back lol! I'll move the CSS later -->
 <div style="display: inline-block; background-color:#030303; -webkit-border-top-left-radius: 2ex; -webkit-border-top-right-radius: 2ex; -webkit-border-bottom-left-radius: 2ex; -webkit-border-bottom-right-radius: 2ex;"><div style="padding: 10px;"><p><b>New Links!</b></p>
-
-
 <p>New in Code: (Oct 20 2024)
 <br><a href="https://dispelled.ca/categories/Code/Starting%20with%20Github%20-%20Create%20a%20new%20repository%20on%20the%20command%20line.php">Starting with Github - Create a new repository on the command line</a></p>
 <p>New in Code: (Oct 14 2024)
@@ -24,11 +19,7 @@ iframe {display: none;}
 <p>New in Cpus: (Oct 14 2024)
 <br><a href="https://dispelled.ca/categories/Cpus/Re-installing%20ProtonVPN%20on%20Ubuntu%2024.04%20for%20ARM.php">Re-installing ProtonVPN on Ubuntu 24.04 for ARM</a></p>
 </div></div>
-
-<p>&nbsp;</p>
-
 <p><b>Old School News Feeds (RSS)</b> <a href="https://dispelled.ca/categories/Code/RSS%20example%20from%20main%20page.php">How?</a></p>
-
 <p><b>Slashdot</b></p>
 <?php
 	$rss = new DOMDocument();

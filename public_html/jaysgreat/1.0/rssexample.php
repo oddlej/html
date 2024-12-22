@@ -16,7 +16,7 @@
 		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
 		$link = $feed[$x]['link'];
 		$description = $feed[$x]['desc'];
-		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
+		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br>';
 		echo '<p>'.$description.'</p>';
 	}
 ?>
