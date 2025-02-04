@@ -57,10 +57,11 @@ usort( $retval, 'sortByTimestamp' );
 
 <?PHP
   $dirlist = getFileListcat("./");
-echo "<ul class=\"sub-menu\">\n";
+echo "<ul class=\"cat-menu\">\n";
   foreach($dirlist as $file) {
-echo "<li class=\"menu-item menu-item-type-taxonomy menu-item-object-category\">\n";
-    if(preg_match("/\index.php$/", $file['name'])) continue;
+      if(preg_match("/\index.php$/", $file['name'])) continue;
+      if(preg_match("/\error_log$/", $file['name'])) continue;
+echo "<li class=\"cat-menu\">\n";
     echo "<a href=\"{$file['name']}\">",basename($file['tit']),"</a>\n";
 echo "</li>\n";
   }

@@ -1,14 +1,14 @@
 <?php include("header.php"); ?>
-
 <style>
 .tradingview-widget-container
 {
 float:left;
 }
 </style>
-
+<div><p>This page requires Javascript enabled on <a href="https://www.tradingview.com/widget/">https://www.tradingview.com/widget/</a> and <a href="https://dispelled.ca/">https://dispelled.ca/</a> to work.</p></div>
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
+<div style="clear:both;"></div>
   <div class="tradingview-widget-container__widget"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
   {
@@ -460,5 +460,5 @@ float:left;
 <!-- TradingView Widget END -->
 
 <div style="clear:both;"></div>
-<p>This page requires Javascript to be enabled to display. It uses widgets from <a href="https://www.tradingview.com/widget/">Tradingview.com</a></p>
+
 <?php include("footer.php"); ?>
