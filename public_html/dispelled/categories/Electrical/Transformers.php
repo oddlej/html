@@ -97,6 +97,6 @@ Circuit:
 The secondary voltage is given by:
 V2 = V1 * (N2 / N1)
 </code>
-
+</pre>
 <p>&nbsp;</p>
 <?php include("../../footer.php"); ?>
