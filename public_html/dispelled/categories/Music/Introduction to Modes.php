@@ -3,18 +3,22 @@
 <?php include("../../headercat.php"); ?>
 
 <h1>Introduction to Modes</h1>
-<p>In music theory, modes are scales derived from the major scale by starting on different scale degrees. Each mode has a unique sound and character, making them useful for various musical contexts. There are seven modes, each corresponding to a different degree of the major scale.</p>
+<p>In music theory, modes are scales derived from the major scale by starting on different scale degrees. Each mode has its own unique sound and character, making them essential tools for musicians and composers. This tutorial will provide an in-depth introduction to the seven modes of the major scale, each corresponding to a different degree of the major scale.</p>
 
 <h2>The Seven Modes</h2>
-<p>The seven modes are:</p>
+<p>Let's use C Major for this. First things first. I wish someone would have explained it like this when I was trying to learn. You keep playing C major, starting on a different note of it, and the Key changes with what note you start on. This can be transposed to any key but let's stick with C Major for now.</p>
+<code class="language-plaintext">C - D - E - F - G - A - B - C
+</code>
+<h2>What Are Modes?</h2>
+<p>Modes are variations of the major scale, each starting on a different scale degree. There are seven modes. The modes are:</p>
 <ul>
-    <li><strong>Ionian</strong> (1st degree)</li>
-    <li><strong>Dorian</strong> (2nd degree)</li>
-    <li><strong>Phrygian</strong> (3rd degree)</li>
-    <li><strong>Lydian</strong> (4th degree)</li>
-    <li><strong>Mixolydian</strong> (5th degree)</li>
-    <li><strong>Aeolian</strong> (6th degree)</li>
-    <li><strong>Locrian</strong> (7th degree)</li>
+    <li><strong>Ionian</strong> (1st degree) The major scale itself. Key of C, Starts on C.</li>
+    <li><strong>Dorian</strong> (2nd degree) Starts on the second degree of the major scale. Key of D, playing C major scale, starts on D.</li>
+    <li><strong>Phrygian</strong> (3rd degree) Starts on the third degree of the major scale. Key of E, Same thing but starts on E.</li>
+    <li><strong>Lydian</strong> (4th degree) Starts on the fourth degree of the major scale. Key of F, starts on F.</li>
+    <li><strong>Mixolydian</strong> (5th degree) Starts on the fifth degree of the major scale. Key of G, starts on G.</li>
+    <li><strong>Aeolian</strong> (6th degree) The natural minor scale, starts on the sixth degree of the major scale. Key of A, starts on A.</li>
+    <li><strong>Locrian</strong> (7th degree) Starts on the seventh degree of the major scale. Key of B, starts on B.</li>
 </ul>
 
 <h2>Mode Formulas</h2>
@@ -88,20 +92,43 @@ B - C - D - E - F - G - A - B
 </code>
 </pre>
 
-<h2>Applications of Modes</h2>
-<p>Modes are used in various musical contexts, including:</p>
+<h2>Sound and Character of the Modes</h2>
+<p>Each mode has a unique sound and character, making them suitable for different musical contexts:</p>
 <ul>
-    <li>Composition: Creating melodies and harmonies with different modal flavors.</li>
-    <li>Improvisation: Providing a framework for soloing over chord progressions.</li>
-    <li>Analysis: Understanding the modal structure of existing music.</li>
+    <li><strong>Ionian:</strong> Bright and happy, the standard major scale.</li>
+    <li><strong>Dorian:</strong> Jazzy and soulful, often used in jazz and funk.</li>
+    <li><strong>Phrygian:</strong> Exotic and Spanish-flavored, often used in flamenco and metal.</li>
+    <li><strong>Lydian:</strong> Dreamy and ethereal, often used in film scores and progressive rock.</li>
+    <li><strong>Mixolydian:</strong> Bluesy and rock-oriented, often used in blues and rock music.</li>
+    <li><strong>Aeolian:</strong> Dark and melancholic, the natural minor scale.</li>
+    <li><strong>Locrian:</strong> Dissonant and unstable, rarely used but effective for creating tension.</li>
+</ul>
+
+<h2>Applications of the Modes</h2>
+<p>Modes are used in various musical contexts to create different moods and atmospheres:</p>
+<ul>
+    <li><strong>Ionian:</strong> Used in pop, classical, and folk music for its bright and happy sound.</li>
+    <li><strong>Dorian:</strong> Used in jazz, funk, and blues for its soulful and jazzy sound.</li>
+    <li><strong>Phrygian:</strong> Used in flamenco, metal, and Middle Eastern music for its exotic sound.</li>
+    <li><strong>Lydian:</strong> Used in film scores, progressive rock, and jazz for its dreamy and ethereal sound.</li>
+    <li><strong>Mixolydian:</strong> Used in blues, rock, and jazz for its bluesy and rock-oriented sound.</li>
+    <li><strong>Aeolian:</strong> Used in classical, rock, and pop music for its dark and melancholic sound.</li>
+    <li><strong>Locrian:</strong> Used sparingly in jazz and metal for its dissonant and unstable sound.</li>
 </ul>
 
 <h2>Practice Exercises</h2>
-<p>Here are some practice exercises to help you get familiar with modes:</p>
+<p>Here are some practice exercises to help you get familiar with the modes:</p>
 <ol>
     <li>Play each mode of the C major scale on your instrument, ascending and descending.</li>
     <li>Write out the notes of each mode in different keys and play them on your instrument.</li>
-    <li>Practice improvising using different modes over a static chord or drone.</li>
+    <li>Practice improvising using each mode over a backing track in the corresponding key.</li>
+    <li>Compose a short melody using each mode and play it on your instrument.</li>
+    <li>Analyze a piece of music that uses modes and identify the modes used in the composition.</li>
+    <li>Practice playing chords derived from each mode in different keys.</li>
+    <li>Improvise a solo using each mode over a backing track in a jazz, rock, or classical style.</li>
+    <li>Transcribe a solo or melody that uses modes and play it on your instrument.</li>
+    <li>Create a chord progression using chords derived from each mode and play it on your instrument.</li>
+    <li>Experiment with combining different modes in your improvisation and compositions.</li>
 </ol>
 
 <p>&nbsp;</p>
