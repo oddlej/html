@@ -6,7 +6,7 @@
 </head>
 <body>	
 <div id="title">
-	<div id="name"><a href="../../"-->><h1>Website Name</h1></a>
+	<div id="name"><a href="../../"><h1>Website Name</h1></a>
 	</div>
 </div>
 <div id="page" class="hfeed site">
