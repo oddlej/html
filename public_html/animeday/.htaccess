@@ -1,9 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Force HTTPS and WWW
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [OR,NC]
-RewriteCond %{https} off
-	RewriteRule ^(.*)$ https://animeday.ca/$1 [R=301,L]
    	RewriteRule ^a$ a.php [L]
    	RewriteRule ^a/$ a.php [L]
 </IfModule>

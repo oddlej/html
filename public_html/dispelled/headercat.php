@@ -24,7 +24,7 @@ body.custom-background {background-image: url('../../bg/bg.jpg'); background-rep
 
 <body class="custom-background full-width">
 <div id="titlediv"><div id="title">
-<div style="text-align: right;"><a href="https://github.com/oddlej/" title="@oddlej on Github.com"><img style="padding-top: 63px; display: inline !important" src="https://avatars.githubusercontent.com/u/185309100?v=4&s=48" ></a><a href="/"><img src="/bg/dispelled.png" style="padding-right: 100px; display: inline !important" title="Hocus Pocus Black Magic"></a></div></div></div>			
+<div style="text-align: right;"><a href="https://github.com/oddlej/" title="@oddlej on Github.com"><img style="padding-top: 30px; display: inline !important" src="https://avatars.githubusercontent.com/u/185309100?v=4&s=48" ></a><a href="/"><img src="/bg/dispelled.png" style="padding-right: 100px; display: inline !important" title="Hocus Pocus Black Magic"></a></div></div></div>			
 <div class="content">
 <div class="flex-menu">			
 <div id="menu-item" class="menu-item"><a href="../../cori/">Cori&#8217;s Stuff</a></div><div id="menu-item" class="menu-item"><a href="/j/">J&#8217;s stuff</a></div><div id="menu-item" class="menu-item"><a href="../../">Back to Categories >></a></div>

@@ -8,31 +8,31 @@ opacity: .90;
 .flex-container {
   width: 80%;
  /* display: flex; */
-  background-color: #11111a;
+//  background-color: #11111a;
   justify-content: center;
 }
 .flex-menu {
   width: 80%;
   display: flex;
-  background-color: #11111a;
+//  background-color: #259ccc; // #11111a;
   justify-content: center;
     flex-wrap: wrap;
 }
 .flex-container > div {
-  background-color: #252539;
+//  background-color: #252539;
   margin: 10px;
   padding-top: 10px;
     padding-right: 20px;
         padding-left: 20px;
 }
 .menu-item {
-  background-color: #11111a;
+//  background-color: #259ccc; // #11111a;
   margin: 5px;
   padding: 5px;
   justify-content: center;
 }
 .menu-item:hover {
-  background-color: #252539;
+  background-color: #e0e0e0; // #252539;
 }
 
 pre { 
@@ -52,3 +52,56 @@ color: white !important;
 	font-family: "Roboto Mono", monospace !important;
 	  background-color: #434367 !important;
 	  }
+
+
+body {
+  font-family: "Open Sans", -apple-system, "system-ui", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: var(--vs);
+background-color: #007aaf;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #e0e0e0;
+
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+:root {
+    --bg: #007aaf;
+    --text: #e0e0e0;
+    --highlight: #252539; // #49c;
+    --bg-lightened-10: #252539;
+    --bg-lightened-25: #434367;
+    --highlight-lightened-20: #94c5e2;
+
+a {
+    color: var(--highlight);
+  }
+
+
+
+pre, code {
+    background-color: #656c7633;
+  }
+
+
+
+
+
+
+
+
+
+}
